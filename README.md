@@ -491,3 +491,39 @@ This survey is conducted by The Times' Data and Graphics Department. If you'd li
 ## Contact
 
 To inquire about the data or about reuse, please contact Data and Graphics Editor [Ben Welsh](https://palewi.re/who-is-ben-welsh/) at [ben.welsh@latimes.com](mailto:ben.welsh@latimes.com)
+
+## Dashboard visualization (DSCI560HW5)
+### install and run the visualization
+1. Copy this github URL and clone to local repository by executing in command line:  
+    `git clone https://github.com/YiLisa/california-coronavirus-data.git`  
+
+2.if not already installed, install virtualenv by runing `pip install pip virtualenv`  
+
+3. Go to project folder (california-coronavirus-data) and create new empty environment named env by running:   
+On macOS and Linux: `python3 -m venv env`  
+On Windows: `py -m venv env`  
+
+4. Activate the new enviornment by running:  
+On Windows:
+    `.\env\Script\activate`   
+On macOS and Linux:
+    `source env/bin/activate`     
+
+5. Install dependencies by running:  
+    `pip install -r requirements.txt`  
+
+6.Run` Bokeh serve --show resulting.py` in command line. The visualization will show in your web browser.  
+### Instruction to serve the visualization through Docker
+1.Installed docker desktop on your computer
+
+2.Copy this github URL and clone to local repository by executing in command line:  
+    `git clone https://github.com/YiLisa/california-coronavirus-data.git` 
+
+3.Build image in the directory you cloned by executing in command line: `docker build --tag app1`  
+
+4.Make sure you bulid the image successfully in terminal.(eg:docker images) it will show the images you have
+
+5.Run the image by running `docker run -p 5006:5006 -it app1`
+
+6.Click on the url shwing in terminal, it should be something like http://localhost:5006/resulting , visualization will show in web browser.
+
